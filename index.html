@@ -1,0 +1,91 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>HCID 520 Interactive Art</title>
+    <style>
+* { padding: 0; margin: 0; }
+body {
+  color: #ccc;
+  font-size: 1em;
+  line-height: 1.7em;
+}
+a {
+  color: #ccc;
+  text-decoration: none;
+  border-bottom: dotted 1px;
+}
+a:hover {
+  color: #fff;
+  border-bottom-color: transparent;
+}
+#msg {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  padding: 10px 20px;
+}
+#status {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  padding: 20px;
+}
+.btn {
+  margin-right: 10px;
+  padding: 1px 20px;
+  border: solid 1px #999;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 400;
+  line-height: 2.5em;
+  text-align: center;
+  text-decoration: none;
+}
+.btn:hover {
+  border: solid 1px #ccc;
+  box-shadow: 0 0 3px 3px #777;
+}
+#onBtn {
+  background-color: #666;
+  color: #ccc;
+}
+#onBtn:hover {
+  background-color: #7f7f7f;
+  color: #f7f7f7;
+}
+#offBtn {
+  display: none;
+  background-color: #faaaa6;
+  color: #7f5655;
+}
+#offBtn:hover {
+  background-color: #ff9c99;
+  color: #5b3939;
+}
+#micStatus {
+  font-weight: 400;
+  color: #e25270; 
+}
+#msgContent {
+  margin-left: 20px;
+}
+    </style>
+  </head>
+  <body>
+    <div id="msg">
+      <div>The goal is to uncover the backgrounds. Try to drag your mouse on the canvas, or hit the mic button and let some music help you!</div>
+      <input type="button" value="Turn On Microphone" id="onBtn" class="btn" />
+      <input type="button" value="Turn Off Microphone" id="offBtn" class="btn" />
+      Microphone: <span id="micStatus">OFF</span>, 
+      Volume Scale: <span id="volumeScale">0</span>, 
+      Line Count: <span id="lineCount">0</span>, 
+      Line Width: <span id="lineWidth">0</span>
+      <!--O: <span id="imgOpacity">0</span>-->
+    </div>
+    <div id="status">
+    </div>
+    <canvas id="canvas" width="800" height="600"></canvas>
+    <script src="draw.js"></script>
+    <script src="scaffold.js"></script>
+  </body>
+</html>
